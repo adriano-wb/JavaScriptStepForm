@@ -79,6 +79,7 @@ main {
 }
 
 .etapas-item__number--atual {
+	border-color: var(--light-blue);
 	animation: transitionOpacity 0.3s linear;
 	transition: 0.2s;
 	color: var(--marine-blue);
