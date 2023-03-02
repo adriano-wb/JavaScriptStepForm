@@ -77,6 +77,13 @@ hr {
 	vertical-align: middle;
 }
 
+.content-center article {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	padding-top: 95px;
+}
+
 .container__info {
 	margin: 0;
   box-shadow: none;

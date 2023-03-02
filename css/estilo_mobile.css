@@ -106,7 +106,14 @@ main {
 
 .content {
 	animation: transitionOpacity 0.3s linear;
+	display: flex;
 	transition: 0.2s;
+}
+
+.content-center article {
+	display: flex;
+	flex-direction: column;
+	padding: 45px 0;
 }
 
 @keyframes transitionOpacity {
@@ -543,7 +550,6 @@ body .info-head__text {
 }
 
 .c-info-logo {
-  margin-top: 45px;
   text-align: center;
 }
 
