@@ -187,10 +187,16 @@ window.onload = () => {
         }
 
         if (addOnSubTotal.children[0].style.display === "block" &&
-            addOnSubTotal.children[2].style.display === "block" &&
+            addOnSubTotal.children[1].style.display === "block" &&
             addOnSubTotal.children[2].style.display === "block") {
           somaTotal =
             precoApenasNumeroPlano + precoSubtotalAddOnPlan1 + precoSubtotalAddOnPlan2 + precoSubtotalAddOnPlan3;
+        }
+
+        if (addOnSubTotal.children[0].style.display === "none" &&
+            addOnSubTotal.children[1].style.display === "none" &&
+            addOnSubTotal.children[2].style.display === "none") {
+          somaTotal = precoApenasNumeroPlano;
         }
 
         // Espaço para a soma total do produto
