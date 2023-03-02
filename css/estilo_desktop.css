@@ -177,6 +177,7 @@ hr {
 	margin-right: 82px;
 	padding: 16px 26px;
 	transition: 0.2s;
+	width: 125px;
 }
 
 .c-btn__botao-next:hover {
