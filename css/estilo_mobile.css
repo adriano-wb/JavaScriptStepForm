@@ -241,6 +241,7 @@ body .info-head__text {
 	border-radius: 3px;
 	padding: 12px 15px;
 	font-size: 0.95rem;
+	width: 100px;
 }
 
 .c-ofertas {
