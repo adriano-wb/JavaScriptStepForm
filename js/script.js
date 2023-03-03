@@ -202,14 +202,18 @@ window.onload = () => {
           somaTotal = precoApenasNumeroPlano;
         }
 
-        totalPrecoValor.firstChild.nodeValue =
-          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
-
+        
 
         // Espaço para a soma total do produto
         if (moOrYrCheck.checked) {
+          totalPrecoValor.firstChild.nodeValue =
+          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
+
           totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("+$", "$");
         } else {
+          totalPrecoValor.firstChild.nodeValue =
+          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
+
           totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("$", "+$");
         }
       }
