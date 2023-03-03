@@ -203,9 +203,17 @@ window.onload = () => {
         }
 
         // Espaço para a soma total do produto
-        totalPrecoValor.firstChild.nodeValue =
-        totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
-        console.log(precoSubtotalAddOnPlan1);
+        if (moOrYrCheck.checked) {
+          totalPrecoValor.firstChild.nodeValue =
+          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
+
+          totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("+$", "$");
+        } else {
+          totalPrecoValor.firstChild.nodeValue =
+          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
+
+          totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("$", "+$");
+        }
       }
 
       /* Se o índice do conteúdo de etapas for igual a 4
@@ -478,9 +486,6 @@ window.onload = () => {
       totalPrecoValor.firstChild.nodeValue =
       totalPrecoValor.firstChild.nodeValue.replace("mo", "yr");
 
-      totalPrecoValor.firstChild.nodeValue =
-      totalPrecoValor.firstChild.nodeValue.replace("+", "");
-
       /* Alterar o tipo total na etapa 04 para year */
       confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue =
       confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue.replace("month", "year");
@@ -531,9 +536,6 @@ window.onload = () => {
         /* Valor total alterar mensalidade ou anuidade */
         totalPrecoValor.firstChild.nodeValue =
         totalPrecoValor.firstChild.nodeValue.replace("yr", "mo");
-
-        totalPrecoValor.firstChild.nodeValue =
-        totalPrecoValor.firstChild.nodeValue.replace("", "+");
 
         /* Alterar o título total na etapa 04 para month */
         confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue =
