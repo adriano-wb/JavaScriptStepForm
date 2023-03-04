@@ -28,6 +28,8 @@ window.onload = () => {
   const opcionaisNoPlano = document.querySelector(".plan-confirm-options");
   const totalPrecoValor = document.querySelector(".total-price__value");
 
+  let somaTotal = 0;
+
   /* Função para fazer com que todos os conteúdos
     das etapas sejam ocultos para exibir somente um */
   function conteudoEtapasExibirSomenteUm(n) {
@@ -160,8 +162,6 @@ window.onload = () => {
         const precoSubtotalAddOnPlan3 =
         Number(addOnSubTotal.children[2].firstChild.nodeValue.match(/[0-9]/g).join(""));
 
-        let somaTotal = 0;
-
         if (addOnSubTotal.children[0].style.display === "block") {
           somaTotal = precoApenasNumeroPlano + precoSubtotalAddOnPlan1;
         }
@@ -202,10 +202,11 @@ window.onload = () => {
           somaTotal = precoApenasNumeroPlano;
         }
 
-        
+        totalPrecoValor.firstChild.nodeValue =
+        totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
 
         // Espaço para a soma total do produto
-        if (moOrYrCheck.checked) {
+        /* if (moOrYrCheck.checked) {
           totalPrecoValor.firstChild.nodeValue =
           totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
 
@@ -215,7 +216,7 @@ window.onload = () => {
           totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
 
           totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("$", "+$");
-        }
+        } */
       }
 
       /* Se o índice do conteúdo de etapas for igual a 4
@@ -401,9 +402,6 @@ window.onload = () => {
 
     // Exibir título na etapa 03 e etapa 04
     if (moOrYrCheck.checked) {
-
-
-
       /* Se o plano é anual */
 
       // Muda o título na etapa 04
@@ -412,6 +410,9 @@ window.onload = () => {
       /* Alterar o tipo total na etapa 04 para year */
       confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue =
       confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue.replace("month", "year");
+
+      totalPrecoValor.firstChild.nodeValue =
+      totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
     } else {
       /* Se o plano é mensal */
 
@@ -488,9 +489,8 @@ window.onload = () => {
       totalPrecoValor.firstChild.nodeValue =
       totalPrecoValor.firstChild.nodeValue.replace("mo", "yr");
 
-      /* Alterar o tipo total na etapa 04 para year */
-      confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue =
-      confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue.replace("month", "year");
+      totalPrecoValor.firstChild.nodeValue =
+      totalPrecoValor.firstChild.nodeValue.replace(/\+/g, "");
 
     /* Se o plano for mensal */
     } else {
@@ -541,7 +541,9 @@ window.onload = () => {
 
         /* Alterar o título total na etapa 04 para month */
         confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue =
-        confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue.replace("year", "month")
+        confirmPlanoTotal.firstElementChild.firstElementChild.firstChild.nodeValue.replace("year", "month");
+
+        totalPrecoValor.firstChild.nodeValue = "+" + totalPrecoValor.firstChild.nodeValue.replace("+", "");
       }
     }
   }
