@@ -1,6 +1,5 @@
 window.onload = () => {
   let indiceEtapasConteudo = 0; // Variável que representará o índice do .content
-  //let indexEtapas = 0;
   let indiceEtapasNumero = 0;
   const etapasConteudo = document.getElementsByClassName("content");
   const etapasNumeroAtual = document.getElementsByClassName("etapas-item__number");
@@ -204,19 +203,6 @@ window.onload = () => {
 
         totalPrecoValor.firstChild.nodeValue =
         totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
-
-        // Espaço para a soma total do produto
-        /* if (moOrYrCheck.checked) {
-          totalPrecoValor.firstChild.nodeValue =
-          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
-
-          totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("+$", "$");
-        } else {
-          totalPrecoValor.firstChild.nodeValue =
-          totalPrecoValor.firstChild.nodeValue.replace(totalPrecoValor.firstChild.nodeValue.match(/[0-9]/g).join(""), somaTotal);
-
-          totalPrecoValor.firstChild.nodeValue = totalPrecoValor.firstChild.nodeValue.replace("$", "+$");
-        } */
       }
 
       /* Se o índice do conteúdo de etapas for igual a 4
@@ -467,7 +453,8 @@ window.onload = () => {
 
       /* Altere os preços e mensagens na etapa 04 */
       // Exibi "Yearly"
-      confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue = confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue.replace("Monthly", "Yearly");
+      confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue = 
+      confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue.replace("Monthly", "Yearly");
 
       // Muda o valor do preço no título da etapa 04
       confirmDadosPlano.lastElementChild.firstChild.nodeValue =
@@ -517,7 +504,8 @@ window.onload = () => {
 
         /* Altere os preços e mensagens na etapa 04 */
         // Exibi "Yearly"
-        confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue = confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue.replace("Yearly", "Monthy");
+        confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue = 
+        confirmDadosPlano.firstElementChild.firstElementChild.firstChild.nodeValue.replace("Yearly", "Monthy");
 
         // Muda o valor do plano no título da etapa 04
         confirmDadosPlano.lastElementChild.firstChild.nodeValue =
