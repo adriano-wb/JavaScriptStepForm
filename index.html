@@ -45,7 +45,7 @@
             </div>
           </div>
         </aside>
-        <section class="container__info">
+        <div class="container__info">
           <!-- ETAPA 01 -->
           <div class="content">
             <div class="info-head">
@@ -65,14 +65,14 @@
                   <label for="email" class="form-item__label">Email Address</label>
                   <p class="form-item__text-help">This field is required</p>
                 </div>
-                <input type="text" class="form-item__input" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                <input type="text" class="form-item__input" name="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
               </div>
               <div class="form-item">
                 <div class="form-item-flex">
-                  <label for="tel" class="form-item__label">Phone Number</label>
+                  <label for="phone" class="form-item__label">Phone Number</label>
                   <p class="form-item__text-help">This field is required</p>
                 </div>
-                <input type="text" class="form-item__input" name="phone" id="tel" placeholder="e.g. +1 234 567 890" required>
+                <input type="text" class="form-item__input" name="phone" id="phone" placeholder="e.g. +1 234 567 890" required>
               </div>
             </form>
           </div>
@@ -84,7 +84,7 @@
               <p class="info-head__text">You have the option of monthly or yearly billing.</p>
             </header>
             <section class="c-ofertas">
-              <article class="c-ofertas-item">
+              <div class="c-ofertas-item">
                 <div class="c-ofertas-item__icon">
                   <img src="img/icon-arcade.svg" alt="Icon Arcade">
                 </div>
@@ -93,9 +93,9 @@
                   <small class="c-ofertas-item-preco__small">$9/mo</small>
                   <span class="c-ofertas-item-preco__promo">2 months free</span>
                 </div>
-              </article>
+              </div>
 
-              <article class="c-ofertas-item">
+              <div class="c-ofertas-item">
                 <div class="c-ofertas-item__icon">
                   <img src="img/icon-advanced.svg" alt="Icon advanced">
                 </div>
@@ -104,9 +104,9 @@
                   <small class="c-ofertas-item-preco__small">$12/mo</small>
                   <span class="c-ofertas-item-preco__promo">2 months free</span>
                 </div>
-              </article>
+              </div>
 
-              <article class="c-ofertas-item">
+              <div class="c-ofertas-item">
                 <div class="c-ofertas-item__icon">
                   <img src="img/icon-pro.svg" alt="Icon pro">
                 </div>
@@ -115,7 +115,7 @@
                   <small class="c-ofertas-item-preco__small">$15/mo</small>
                   <span class="c-ofertas-item-preco__promo">2 months free</span>
                 </div>
-              </article>
+              </div>
             </section>
             <section class="month-or-yrs">
               <span class="month-or-yrs__text month-or-yrs__text--active">Monthly</span>
@@ -133,7 +133,7 @@
               <h2 class="info-head__title">Pick add-ons</h2>
               <p class="info-head__text">Add-ons help enhance your gaming experience.</p>
             </header>
-            <article class="c-add-on">
+            <div class="c-add-on">
               <div class="c-add-on-item" id="item01">
                 <div class="c-add-on-item-check">
                   <input type="checkbox" class="c-add-on-item-check__input" id="onService">
@@ -174,7 +174,7 @@
                   <span class="c-add-on-price__text">+$2/mo</span>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
 
           <!-- ETAPA 04 -->
@@ -183,16 +183,16 @@
               <h2 class="info-head__title">Finishing up</h2>
               <p class="info-head__text">Double-check everything looks OK before confirming.</p>
             </header>
-            <article class="plan-confirm">
-              <article class="plan-confirm-data">
+            <div class="plan-confirm">
+              <div class="plan-confirm-data">
                 <div class="plan-data-head">
                   <h4 class="plan-data-head__title">Arcade (Monthly)</h4>
                   <a href="#" class="plan-data-head__change">Change</a>
                 </div>
                 <strong class="plan-confirm-data__price">$9/mo</strong>
-              </article>
+              </div>
               <hr>
-              <article class="plan-confirm-options">
+              <div class="plan-confirm-options">
                 <div class="plan-confirm-head">
                   <span class="plan-confirm-head__title">Online service</span>
                   <span class="plan-confirm-head__title">Large storage</span>
@@ -203,29 +203,29 @@
                   <span class="plan-confirm-subtotal__price">+2/mo</span>
                   <span class="plan-confirm-subtotal__price">+2/mo</span>
                 </div>
-              </article>
-              <article class="plan-confirm-total">
+              </div>
+              <div class="plan-confirm-total">
                 <div class="plan-confirm-total-head">
                   <h5 class="plan-confirm-total-head__title">Total (per month)</h5>
                 </div>
                 <div class="total-price">
                   <span class="total-price__value">+$12/mo</span>
                 </div>
-              </article>
-            </article>
+              </div>
+            </div>
           </div>
 
           <!-- FINAL -->
           <div class="content content-center text-center">
-            <article>
+            <div>
               <div class="c-info-logo">
-                <img src="img/icon-thank-you.svg" class="c-info-logo__img">
+                <img src="img/icon-thank-you.svg" alt="Você confirmou, está confirmado seu plano" class="c-info-logo__img">
               </div>
               <h3 class="c-info__title">Thank You!</h3>
               <p class="c-info__text">Thanks for confirming your subscription! We hope you have fun
               using our platform. If you ever need support, please feel free
               to email us at support@loremgaming.com.</p>
-            </article>
+            </div>
           </div>
           <div class="c-btn">
             <button type="button" class="c-btn__botao-prev" id="prev">
@@ -235,7 +235,7 @@
               Next Step
             </button>
           </div>
-        </section>
+        </div>
       </div>
     </main>
 
