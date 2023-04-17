@@ -81,7 +81,7 @@ hr {
 	vertical-align: middle;
 }
 
-.content-center article {
+.content-center div {
 	display: flex;
 	flex-direction: column;
 	padding: 0;
