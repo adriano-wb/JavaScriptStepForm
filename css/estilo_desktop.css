@@ -8,6 +8,10 @@ hr {
 	margin: 22px 0;
 }
 
+.mobile-none {
+	display:block;
+}
+
 .container {
 	background-color: var(--white);
 	/* background: url("../active-states-step-2.jpg") 0 0 / auto no-repeat; */
@@ -146,8 +150,15 @@ hr {
 .c-btn {
 	background: transparent;
   box-shadow: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
   width: 100%;
 	padding: 0;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .c-btn__botao-prev,

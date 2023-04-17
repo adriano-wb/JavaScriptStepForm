@@ -213,7 +213,7 @@ body .info-head__text {
 .c-btn {
   box-shadow: 1px 1px 14px #ccca;
 	position: absolute;
-	bottom: 0;
+	bottom: -120px;
 	left: 0;
   background-color: var(--white);
   width: 100%;
