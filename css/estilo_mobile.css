@@ -111,7 +111,7 @@ main {
 	transition: 0.2s;
 }
 
-.content-center article {
+.content-center div {
 	display: flex;
 	flex-direction: column;
 	padding: 45px 0;
