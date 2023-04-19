@@ -115,6 +115,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	padding: 45px 0;
+	text-align: center;
 }
 
 @keyframes transitionOpacity {
