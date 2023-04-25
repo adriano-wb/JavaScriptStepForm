@@ -115,7 +115,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	padding: 45px 0;
-	text-align: center;
 }
 
 @keyframes transitionOpacity {
@@ -553,7 +552,10 @@ body .info-head__text {
 }
 
 .c-info-logo {
-  text-align: center;
+	text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .c-info-logo__img {
